@@ -1,0 +1,45 @@
+{
+  "name": "background-forever-concurrent",
+  "version": "0.0.1",
+  "description": "A simple library to run a task concurrently in the background forever",
+  "main": "lib/index.js",
+  "types": "lib/index.d.js",
+  "keywords": [
+    "background",
+    "concurrent",
+    "task",
+    "thread",
+    "forever",
+    "perpetual"
+  ],
+  "scripts": {
+    "prebuild": "npm run lint",
+    "build": "tsc",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint-fix": "tslint -c tslint.json -p tsconfig.json --fix",
+    "prepare": "npm run build",
+    "test": "mocha './test/**/*.spec.ts' --require ts-node/register"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briankopp/background-forever-concurrent.git"
+  },
+  "author": "Brian Kopp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/briankopp/background-forever-concurrent/issues"
+  },
+  "homepage": "https://github.com/briankopp/background-forever-concurrent#readme",
+  "devDependencies": {
+    "@types/node": "^12.12.5",
+    "ts-node": "^8.4.1",
+    "tslint": "^6.0.0-beta0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "background-forever": "^1.0.0"
+  }
+}
